@@ -25,11 +25,24 @@ public class Druide {
 	
 	public void fabriquerPotion( int quantitePotion , int forcePotion) {
 		chaudron.remplirChaudron(quantitePotion, forcePotion);
-		parler("J'ai concoct� "+ quantitePotion + " doses de potion magique. Elle a une force de "+ forcePotion );
+		parler("J'ai concocté "+ quantitePotion + " doses de potion magique. Elle a une force de "+ forcePotion );
 	}
 	
-	public void booster( Gaulois ) {
+	public void booster(Gaulois gaulois) {
+		boolean contientPotion = chaudron.resterPotion();
+		String nomGaulois = gaulois.getNom();
 		
+		if (contientPotion) {
+			if(nomGaulois=="Obélix") {
+				parler("Non, "+nomGaulois+" Non!... Et tu le sais très bien !");
+			}else {
+				int forcePotion = chaudron.prendreLouche();
+				gaulois.boirePotion(forcePotion);
+				parler("Tiens "+ nomGaulois + " un peu de potion magique.");
+			}
+		}else {
+			parler("Désolé" + nomGaulois + "il n'y a plus une seule goutte de potion.");
+		}
 	}
 	
 	
