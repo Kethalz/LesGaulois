@@ -19,7 +19,7 @@ public class Romain {
 		System.out.println(prendreParole() + "\"" + texte + "\"");
 	}
 	private String prendreParole() {
-		return "Le romain" + nom + ":";
+		return "Le romain " + nom + ":";
 	}
 	public void recevoirCoup(int forceCoup) {
 		// TODO Auto-generated method stub
