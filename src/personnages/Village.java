@@ -19,6 +19,7 @@ public class Village {
 		if (nbVillageois<nbVillageoisMax) {
 			this.villageois[nbVillageois]= gaulois ;
 			nbVillageois++;
+			gaulois.setVillage(this);
 		}
 	}
 	
