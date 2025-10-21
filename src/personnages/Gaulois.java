@@ -22,7 +22,6 @@ public class Gaulois {
 
 	public static void main(String[] args) {
 		Gaulois asterix = new Gaulois("Astérix", 8);
-
 		System.out.println(asterix);
 	}
 	@Override
@@ -44,6 +43,17 @@ public class Gaulois {
 	}
 	public void setVillage(String village) {
 		this.village = village;
+	}
+	public void sePresenter(Gaulois gaulois, String village) {
+		if(gaulois==village.getChef()) {
+			System.out.println("Le Gaulois"+ getNom()+" : \"Bonjour, je m'appelle "+ getNom()+ ". Je suis l");
+		}
+		if(){
+			System.out.println("Villageois");
+		}
+		else {
+			System.out.println("Pas habitant");
+		}
 	}
 
 }
