@@ -12,7 +12,7 @@ public class Scenario {
 	public static void main(String[] args) {
 		Druide druide = new Druide("Panoramix", 5);
 		druide.parler("Je vais aller préparer une petite potion...");
-		druide.fabriquerPotion(5, 3);
+		druide.fabriquerPotion(5, 8);
 		Gaulois obelix = new Gaulois("Obélix", 25);
 		Gaulois asterix = new Gaulois("Astérix", 8);
 		druide.booster(obelix);
@@ -32,9 +32,9 @@ public class Scenario {
 		do {
 			asterix.frapper(milexcus);
 		} while (milexcus.getForce() > 0);
-		
+
 //		Partie a decommenter
-		
+
 //		Musee musee = new Musee();
 //		asterix.faireUneDonnation(musee);
 
